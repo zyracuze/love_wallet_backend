@@ -1,5 +1,8 @@
 const hello = require('../hello');
 
 test('should return hello world', () => {
-  expect(hello()).toBe('Hello_World');
+  const result = hello();
+  result.then(function (res) {
+    res.message.toBe('Hello_World');
+  })
 });
