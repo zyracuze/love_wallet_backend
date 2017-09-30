@@ -14,5 +14,5 @@ $ npm test
 ```
 - Access url for test
 ```
-http://yourhostname:3000
+http://139.59.106.112:3000
 ```
