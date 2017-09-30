@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest  --coverage",
-    "start": "node server.js"
+    "build": "npm run clear && babel src --ignore **/__mocks__/*.*,**/__test__/*.* --out-dir dist --copy-files",
+    "test": "jest --coverage --forceExit --runInBand",
+    "clear": "rimraf ./dist",
+    "start": "npm run build && node ./dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,32 @@
   },
   "homepage": "https://github.com/zyracuze/love_wallet_backend#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.1",
     "mongoose": "^4.11.13",
     "simple-encryptor": "^1.1.0"
   },
   "devDependencies": {
-    "jest": "^21.2.1"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "^21.2.1",
+    "mockingoose": "^2.3.0",
+    "rimraf": "^2.6.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "./dist"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "html"
+    ],
+    "collectCoverage": true
   }
 }
