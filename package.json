@@ -1,0 +1,28 @@
+{
+  "name": "love_wallet_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jest  --coverage",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyracuze/love_wallet_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zyracuze/love_wallet_backend/issues"
+  },
+  "homepage": "https://github.com/zyracuze/love_wallet_backend#readme",
+  "dependencies": {
+    "express": "^4.16.1",
+    "mongoose": "^4.11.13",
+    "simple-encryptor": "^1.1.0"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
