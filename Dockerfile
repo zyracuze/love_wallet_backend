@@ -6,6 +6,6 @@ COPY src /home/web/src/
 #COPY *.json /home/web/
 WORKDIR /home/web
 RUN npm install
-#RUN npm test
+RUN npm test
 ENTRYPOINT npm run start
 
