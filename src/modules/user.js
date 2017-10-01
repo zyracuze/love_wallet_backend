@@ -55,19 +55,12 @@ exports.destroy = (req, res) => {
 exports.balanceIncrement = (req, res) => {
     const data = req.body
 
-    console.log(data)
-
     User.findOne({n_passport: data.n_passport}).exec().then((result) => {
         return result
     }).then(res => {
         let totalBalance = parseInt(res.balance) + parseInt(data.balance)
         console.log(totalBalance)
-        return User.update({_id: res._id}, {$set: {balance: totalBalance}}).exec()
-            .then((res) => {
-                return res.json(res)
-            });
-    }).catch((err) => {
-        return res.json({error: err})
+        return User.update({_id: res._id}, {$set: {balance: totalBalance}});
     })
 
 }
