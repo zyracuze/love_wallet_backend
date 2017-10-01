@@ -11,11 +11,9 @@ const routes = (function () {
         });
     });
 
-    router.get("/user", (req, res) => {
-        user().then(message => {
-            res.json({message});
-        });
-    });
+    router.get("/users", user.list);
+    router.get("/user/:id", user.get);
+    router.post("/user", user.store);
 
     return router;
 })();
