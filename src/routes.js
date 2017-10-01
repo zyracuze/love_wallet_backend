@@ -15,6 +15,8 @@ const routes = (function () {
     router.get("/user/:id", user.get);
     router.post("/user", user.store);
 
+    router.post("/user/increasebalance", user.balanceIncrement)
+
     return router;
 })();
 
