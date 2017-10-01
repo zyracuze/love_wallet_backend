@@ -20,7 +20,8 @@
   "dependencies": {
     "express": "^4.16.1",
     "mongoose": "^4.11.13",
-    "simple-encryptor": "^1.1.0"
+    "simple-encryptor": "^1.1.0",
+    "dotenv": "^4.0.0"
   },
   "devDependencies": {
     "jest": "^21.2.1"
