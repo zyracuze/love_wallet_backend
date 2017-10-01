@@ -1,14 +1,23 @@
 import hello from "./modules/hello";
-import { Router } from "express";
+import user from "./modules/user";
+import {Router} from "express";
 
 const router = Router();
-const routes = (function() {
-  router.get("/hello", (req, res) => {
-    hello().then(message => {
-      res.json({ message });
+const routes = (function () {
+
+    router.get("/hello", (req, res) => {
+        hello().then(message => {
+            res.json({message});
+        });
     });
-  });
-  return router;
+
+    router.get("/user", (req, res) => {
+        user().then(message => {
+            res.json({message});
+        });
+    });
+
+    return router;
 })();
 
 export default routes;
