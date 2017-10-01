@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/zyracuze/love_wallet_backend#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "cors": "^2.8.4",
     "express": "^4.16.1",
     "mongoose": "^4.11.13",
