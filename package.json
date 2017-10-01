@@ -22,7 +22,9 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.1",
-    "mongoose": "^4.11.13"
+    "mongoose": "^4.11.13",
+    "simple-encryptor": "^1.1.0",
+    "dotenv": "^4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
