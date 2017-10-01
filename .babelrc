@@ -1,4 +1,9 @@
 {
+  "env": {
+    "test": {
+      "presets": ["es2015", "stage-0"]
+    }
+  },
   "passPerPreset": true,
   "presets": [
     "es2015",
