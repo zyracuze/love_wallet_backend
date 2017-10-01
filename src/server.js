@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import routes from "./routes";
 
 mongoose.Promise = global.Promise;
-const dbURI = "mongodb://localhost/test";
+const dbURI = "mongodb://localhost/local";
 mongoose.connect(dbURI, {
   useMongoClient: true
 });
